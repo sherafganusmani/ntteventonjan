@@ -130,6 +130,24 @@
   onclick="document.getElementById('regForm').submit();">
   Register Now
 </a>
+
+<script>
+document.getElementById("regForm").addEventListener("submit", function(event){
+  event.preventDefault();
+
+  fetch(this.action, { method:"POST", body:new FormData(this) })
+  .then(() => {
+      alert("✅ Registered Successfully!");
+      this.reset(); // form remains visible, resets after submit
+  })
+  .catch(() => {
+      alert("⚠ Submission Failed, Try Again.");
+  });
+
+});
+</script>
+<!--
+        
 <script>
 document.getElementById("regForm").addEventListener("submit", function(ev){
     ev.preventDefault();
@@ -137,7 +155,7 @@ document.getElementById("regForm").addEventListener("submit", function(ev){
     .then(() => alert("✅ Form submitted successfully!"))
     .catch(() => alert("⚠ Submission failed, please try again."));
 });
-</script>
+</script>   -->
 
 
 
