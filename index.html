@@ -131,7 +131,35 @@
   Register Now
 </a>
 
+
 <script>
+function handleFormSubmit(event) {
+    event.preventDefault(); // ✅ STOPS redirect
+
+    const form = document.getElementById("regForm");
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: data,
+        mode: "no-cors" // ✅ prevents Gmail/Outlook from opening the response page
+    })
+    .then(() => {
+        alert("✅ Registered Successfully!");
+        form.reset(); // ✅ Reset after OK
+    })
+    .catch(() => {
+        alert("⚠ Submission Failed!");
+    });
+
+    return false;
+}
+</script>
+
+
+        
+
+<!--     <script>
 document.getElementById("submitBtn").addEventListener("click", function() {
   const form = document.getElementById("regForm");
 
@@ -149,7 +177,7 @@ document.getElementById("submitBtn").addEventListener("click", function() {
       alert("⚠ Submission Failed, Try Again.");
   });
 });
-</script>
+</script>   -->
 
 
 
