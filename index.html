@@ -124,14 +124,43 @@
   </table>
 </form>
 
-<!-- Register Button -->
+<!-- Register Button
 <a href="#" class="cta-button"
   style="background:#004C97;color:#fff;padding:14px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
-  onclick="document.getElementById('regForm').submit();">
+  onclick="document.getElementById('regForm').submit();">   
   Register Now
+</a>
+ -->
+<a href="#"
+   class="cta-button"
+   style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
+   onclick="submitToSheet(); return false;">
+   Register Now
 </a>
 
 
+        <script>
+function submitToSheet() {
+    const form = document.getElementById("regForm");
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors" // ✅ This stops the redirect page from opening
+    });
+
+    // ✅ Show success popup
+    alert("✅ Registered Successfully!");
+
+    // ✅ Reset form fields
+    form.reset();
+}
+</script>
+
+
+        
+<!--
 <script>
 function handleFormSubmit(event) {
     event.preventDefault(); // ✅ STOPS redirect
@@ -154,7 +183,7 @@ function handleFormSubmit(event) {
 
     return false;
 }
-</script>
+</script>   -->
 
 
         
