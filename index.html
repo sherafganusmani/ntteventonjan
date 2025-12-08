@@ -3,6 +3,7 @@
 <head>
 <title>Round Table Invitation</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <style>
   body { margin:0;padding:0;background:#f2f2f2 }
   table { border-collapse:collapse }
@@ -65,26 +66,14 @@
             <td align="center" valign="middle" style="padding:30px; background:rgba(0,0,0,0.4);">
 
               <h1 style="font-size:26px;font-weight:bold;margin:0;color:#ffffff;text-align:center;">
-                GenAI-Enabled Predictive Procurments & Building Resilient Supply Network
+                GenAI-Enabled Predictive Procurements & Building Resilient Supply Network
               </h1>
 
-           
+              <br><br><br>
 
-         <!--     <ul style="text-align:left;font-size:15px;line-height:1.5;margin:0 0 20px 20px;">
-                <li>Develop flexible sourcing strategies</li>
-                <li>Build agility into procurement operations</li>
-                <li>Embed AI across the value chain</li>
-              </ul>
-
-              <p style="text-align:left;font-size:15px;margin:0 0 15px 20px;">Join us alongside industry leaders to explore:</p>
-
-              <ul style="text-align:left;font-size:15px;line-height:1.5;margin:0 0 25px 20px;">
-                <li>AI-driven procurement transformation</li>
-                <li>Mitigating geopolitical risks</li>
-                <li>Networking and best-practice sharing</li>
-              </ul>    -->    <br><br><br>
-
-              <h2 style="font-size:20px;font-weight:bold;margin:0 0 10px;color:#ffffff;text-align:left;padding-left:20px;"><u></u>Event Details</u></h2>
+              <h2 style="font-size:20px;font-weight:bold;margin:0 0 10px;color:#ffffff;text-align:left;padding-left:20px;">
+                Event Details
+              </h2>
 
               <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation" style="color:#ffffff;font-size:15px;padding-left:20px;">
                 <tr><td width="30">📅</td><td><strong>Date:</strong> Friday, 16th January</td></tr>
@@ -101,167 +90,97 @@
       </td>
     </tr>
 
-    <!-- ✅ UPDATED REGISTRATION SECTION (Professional & clean textboxes) -->
+    <!-- REGISTRATION FORM -->
     <tr>
       <td align="center" style="padding:32px 22px;background:#ffffff;font-family:Arial, sans-serif;">
         <h2 style="font-size:22px;font-weight:700;margin-bottom:20px;color:#000000;">
           Registration Details
         </h2>
 
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbxmVO6v3dNo39c6jNyWQL5BNQIIxd3XzgGHAbXCChjWB5_eCApD6lZnsHg51BnsVweD/exec" id="regForm"  onsubmit="return false;">
-  <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation">
-    <tr><td><input type="text" name="name" placeholder="Full Name *" required></td></tr>
-    <tr><td><input type="text" name="designation" placeholder="Designation *" required></td></tr>
-    <tr><td><input type="text" name="company" placeholder="Company *" required></td></tr>
-    <tr><td><input type="text" name="department" placeholder="Department/Group *" required></td></tr>
-    <tr><td><input type="text" name="mobile" placeholder="Mobile Number *" pattern="[0-9]{10}" required></td></tr>
-    <tr><td><input type="email" name="email" placeholder="Email ID *" required></td></tr>
-  </table>
-</form>
+        <form method="POST"
+              action="https://script.google.com/macros/s/AKfycbxmVO6v3dNo39c6jNyWQL5BNQIIxd3XzgGHAbXCChjWB5_eCApD6lZnsHg51BnsVweD/exec"
+              id="regForm">
 
-<!-- Register Button
-<a href="#" class="cta-button"
-  style="background:#004C97;color:#fff;padding:14px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
-  onclick="document.getElementById('regForm').submit();">   
-  Register Now
-</a>
- -->
-<a href="#"
-   class="cta-button"
-   style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
-   onclick="submitToSheet(); return false;">
-   Register Now
-</a>
+          <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation">
 
+            <tr><td>
+              <input type="text" name="name" placeholder="Full Name *"
+                     required
+                     oninvalid="this.setCustomValidity('Please enter your full name')"
+                     oninput="this.setCustomValidity('')">
+            </td></tr>
 
+            <tr><td>
+              <input type="text" name="designation" placeholder="Designation *"
+                     required
+                     oninvalid="this.setCustomValidity('Please enter your designation')"
+                     oninput="this.setCustomValidity('')">
+            </td></tr>
+
+            <tr><td>
+              <input type="text" name="company" placeholder="Company *"
+                     required
+                     oninvalid="this.setCustomValidity('Please enter your company name')"
+                     oninput="this.setCustomValidity('')">
+            </td></tr>
+
+            <tr><td>
+              <input type="text" name="department" placeholder="Department/Group *"
+                     required
+                     oninvalid="this.setCustomValidity('Please enter your department')"
+                     oninput="this.setCustomValidity('')">
+            </td></tr>
+
+            <tr><td>
+              <input type="text" name="mobile" placeholder="Mobile Number *"
+                     pattern="[0-9]{10}" required
+                     oninvalid="this.setCustomValidity('Please enter a valid 10 digit mobile number')"
+                     oninput="this.setCustomValidity('')">
+            </td></tr>
+
+            <tr><td>
+              <input type="email" name="email" placeholder="Email ID *"
+                     required
+                     oninvalid="this.setCustomValidity('Please enter your email address')"
+                     oninput="this.setCustomValidity('')">
+            </td></tr>
+
+          </table>
+        </form>
+
+        <!-- REGISTER BUTTON -->
+        <a href="#"
+           class="cta-button"
+           style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
+           onclick="validateAndSubmit(); return false;">
+           Register Now
+        </a>
+
+        <!-- JS -->
         <script>
-function submitToSheet() {
-    const form = document.getElementById("regForm");
-    const formData = new FormData(form);
+          function validateAndSubmit() {
+              const form = document.getElementById("regForm");
 
-    fetch(form.action, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors" // ✅ This stops the redirect page from opening
-    });
+              if (!form.checkValidity()) {
+                  form.reportValidity();
+                  return;
+              }
 
-    // ✅ Show success popup
-    alert("✅ Registered Successfully!");
+              const formData = new FormData(form);
 
-    // ✅ Reset form fields
-    form.reset();
-}
-</script>
+              fetch(form.action, {
+                  method: "POST",
+                  body: formData,
+                  mode: "no-cors"
+              });
 
-
-        
-<!--
-<script>
-function handleFormSubmit(event) {
-    event.preventDefault(); // ✅ STOPS redirect
-
-    const form = document.getElementById("regForm");
-    const data = new FormData(form);
-
-    fetch(form.action, {
-        method: "POST",
-        body: data,
-        mode: "no-cors" // ✅ prevents Gmail/Outlook from opening the response page
-    })
-    .then(() => {
-        alert("✅ Registered Successfully!");
-        form.reset(); // ✅ Reset after OK
-    })
-    .catch(() => {
-        alert("⚠ Submission Failed!");
-    });
-
-    return false;
-}
-</script>   -->
-
-
-        
-
-<!--     <script>
-document.getElementById("submitBtn").addEventListener("click", function() {
-  const form = document.getElementById("regForm");
-
-  const formData = new FormData(form);
-
-  fetch(form.action, {
-    method: "POST",
-    body: formData
-  })
-  .then(() => {
-      alert("✅ Registered Successfully!");
-      form.reset();  // ✅ Reset form after OK click
-  })
-  .catch(() => {
-      alert("⚠ Submission Failed, Try Again.");
-  });
-});
-</script>   -->
-
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-<!--        <script>
-document.getElementById("regForm").addEventListener("submit", function(event){
-  event.preventDefault();
-
-  fetch(this.action, { method:"POST", body:new FormData(this) })
-  .then(() => {
-      alert("✅ Registered Successfully!");
-      this.reset(); // form remains visible, resets after submit
-  })
-  .catch(() => {
-      alert("⚠ Submission Failed, Try Again.");
-  });
-
-});
-</script>   -->
-
-
-
-
-        
-<!--
-        
-<script>
-document.getElementById("regForm").addEventListener("submit", function(ev){
-    ev.preventDefault();
-    fetch(this.action, { method:"POST", body:new FormData(this) })
-    .then(() => alert("✅ Form submitted successfully!"))
-    .catch(() => alert("⚠ Submission failed, please try again."));
-});
-</script>   -->
-
-
-
-    <!-- FOOTER CONTACT 
-    <tr>
-      <td align="center" style="background:#000000;color:#ffffff;padding:28px 22px;font-family:Arial;font-size:15px;">
-
-        <strong style="font-size:18px;display:block;margin-bottom:6px;">Nishith Sampat</strong>
-        <span style="font-size:14px;">Director – Business & Industry Marketing, APC</span>
-
-        <table cellpadding="5" cellspacing="0" border="0" role="presentation" style="color:#ffffff;font-size:14px;text-align:left;margin-top:15px;" align="center">
-          <tr><td width="30">📧</td><td>Email: nishith.sampat@global.ntt</td></tr>
-          <tr><td>📱</td><td>Phone: +91 9869445495</td></tr>
-          <tr><td>🏢</td><td>Designation: Director</td></tr>
-        </table>
+              alert("✅ Registered Successfully!");
+              form.reset();
+          }
+        </script>
 
       </td>
-    </tr>   -->
+    </tr>
 
   </table>
 
