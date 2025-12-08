@@ -37,153 +37,139 @@
 
 <body>
 
-<table width="100%" role="presentation">
+<table width="100%">
 <tr><td align="center" style="padding:20px 5px">
 
-  <table width="610" class="container" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 20px rgba(0,0,0,0.3)" role="presentation">
+<table width="610" class="container" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 20px rgba(0,0,0,0.3)">
 
-    <!-- LOGO -->
-    <tr>
-      <td align="center" style="padding:22px 0;">
-        <img src="https://ipj.dreamhosters.com/wp-content/uploads/2023/11/NTT-logo-new.jpeg" width="200" alt="Logo">
-      </td>
-    </tr>
+  <!-- LOGO -->
+  <tr>
+    <td align="center" style="padding:22px 0;">
+      <img src="https://ipj.dreamhosters.com/wp-content/uploads/2023/11/NTT-logo-new.jpeg" width="200">
+    </td>
+  </tr>
 
-    <!-- BACKGROUND IMAGE SECTION -->
-    <tr>
-      <td style="padding:0;margin:0;">
+  <!-- FORM -->
+  <tr>
+    <td align="center" style="padding:32px 22px;background:#ffffff;font-family:Arial, sans-serif;">
+      <h2 style="font-size:22px;font-weight:700;margin-bottom:20px;color:#000000;">
+        Registration Details
+      </h2>
 
-      <!--[if mso]>
-      <v:rect fill="true" stroke="false" style="width:610px;height:450px;" xmlns:v="urn:schemas-microsoft-com:vml">
-        <v:fill type="frame" src="https://theaddressevents.com/online/bakgroundimg.jpg"/>
-        <v:textbox inset="0,0,0,0">
-      <![endif]-->
+      <form method="POST"
+            action="https://script.google.com/macros/s/AKfycbxmVO6v3dNo39c6jNyWQL5BNQIIxd3XzgGHAbXCChjWB5_eCApD6lZnsHg51BnsVweD/exec"
+            id="regForm">
 
-        <table width="610" height="350" cellpadding="0" cellspacing="0" border="0"
-          background="https://theaddressevents.com/online/bakgroundimg.jpg"
-          style="background-size:cover;background-position:center;background-repeat:no-repeat;font-family:Arial,sans-serif;color:#ffffff" class="container content-padding" role="presentation">
-          <tr>
-            <td align="center" valign="middle" style="padding:30px; background:rgba(0,0,0,0.4);">
+        <table width="100%">
 
-              <h1 style="font-size:26px;font-weight:bold;margin:0;color:#ffffff;text-align:center;">
-                GenAI-Enabled Predictive Procurements & Building Resilient Supply Network
-              </h1>
+          <tr><td>
+            <input type="text" name="name" placeholder="Full Name *"
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your full name')"
+                   oninput="this.setCustomValidity('')">
+          </td></tr>
 
-              <br><br><br>
+          <tr><td>
+            <input type="text" name="designation" placeholder="Designation *"
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your designation')"
+                   oninput="this.setCustomValidity('')">
+          </td></tr>
 
-              <h2 style="font-size:20px;font-weight:bold;margin:0 0 10px;color:#ffffff;text-align:left;padding-left:20px;">
-                Event Details
-              </h2>
+          <tr><td>
+            <input type="text" name="company" placeholder="Company *"
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your company name')"
+                   oninput="this.setCustomValidity('')">
+          </td></tr>
 
-              <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation" style="color:#ffffff;font-size:15px;padding-left:20px;">
-                <tr><td width="30">📅</td><td><strong>Date:</strong> Friday, 16th January</td></tr>
-                <tr><td>⏰</td><td><strong>Time:</strong> 6:30 PM onwards</td></tr>
-                <tr><td>📍</td><td><strong>Venue:</strong> EBC 101, Jio Convention Center</td></tr>
-              </table>
+          <tr><td>
+            <input type="text" name="department" placeholder="Department/Group *"
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your department')"
+                   oninput="this.setCustomValidity('')">
+          </td></tr>
 
-            </td>
-          </tr>
+          <tr><td>
+            <input type="text" name="mobile" placeholder="Mobile Number *"
+                   pattern="[0-9]{10}" required
+                   oninvalid="this.setCustomValidity('Please enter 10 digit mobile number')"
+                   oninput="this.setCustomValidity('')">
+          </td></tr>
+
+          <tr><td>
+            <input type="email" id="email" name="email" placeholder="Email ID *"
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your work email')"
+                   oninput="this.setCustomValidity('')">
+          </td></tr>
+
         </table>
+      </form>
 
-      <!--[if mso]></v:textbox></v:rect><![endif]-->
+      <!-- BUTTON -->
+      <a href="#"
+         class="cta-button"
+         style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
+         onclick="validateAndSubmit(); return false;">
+         Register Now
+      </a>
 
-      </td>
-    </tr>
+      <!-- SCRIPT -->
+      <script>
+        function validateAndSubmit() {
 
-    <!-- REGISTRATION FORM -->
-    <tr>
-      <td align="center" style="padding:32px 22px;background:#ffffff;font-family:Arial, sans-serif;">
-        <h2 style="font-size:22px;font-weight:700;margin-bottom:20px;color:#000000;">
-          Registration Details
-        </h2>
+            const form = document.getElementById("regForm");
+            const emailField = document.getElementById("email");
+            const email = emailField.value.toLowerCase();
 
-        <form method="POST"
-              action="https://script.google.com/macros/s/AKfycbxmVO6v3dNo39c6jNyWQL5BNQIIxd3XzgGHAbXCChjWB5_eCApD6lZnsHg51BnsVweD/exec"
-              id="regForm">
+            // ❌ Block public email domains
+            const blockedDomains = [
+                "gmail.com",
+                "yahoo.com",
+                "hotmail.com",
+                "outlook.com",
+                "rediffmail.com",
+                "icloud.com",
+                "aol.com",
+                "protonmail.com",
+                "zoho.com"
+            ];
 
-          <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation">
+            const domain = email.split("@")[1];
 
-            <tr><td>
-              <input type="text" name="name" placeholder="Full Name *"
-                     required
-                     oninvalid="this.setCustomValidity('Please enter your full name')"
-                     oninput="this.setCustomValidity('')">
-            </td></tr>
+            if (blockedDomains.includes(domain)) {
+                emailField.setCustomValidity("Please use your official company email address");
+                form.reportValidity();
+                return;
+            } else {
+                emailField.setCustomValidity("");
+            }
 
-            <tr><td>
-              <input type="text" name="designation" placeholder="Designation *"
-                     required
-                     oninvalid="this.setCustomValidity('Please enter your designation')"
-                     oninput="this.setCustomValidity('')">
-            </td></tr>
+            // ✅ Normal validation
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
 
-            <tr><td>
-              <input type="text" name="company" placeholder="Company *"
-                     required
-                     oninvalid="this.setCustomValidity('Please enter your company name')"
-                     oninput="this.setCustomValidity('')">
-            </td></tr>
+            // ✅ Send data to Google Sheet
+            const formData = new FormData(form);
 
-            <tr><td>
-              <input type="text" name="department" placeholder="Department/Group *"
-                     required
-                     oninvalid="this.setCustomValidity('Please enter your department')"
-                     oninput="this.setCustomValidity('')">
-            </td></tr>
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            });
 
-            <tr><td>
-              <input type="text" name="mobile" placeholder="Mobile Number *"
-                     pattern="[0-9]{10}" required
-                     oninvalid="this.setCustomValidity('Please enter a valid 10 digit mobile number')"
-                     oninput="this.setCustomValidity('')">
-            </td></tr>
+            alert("✅ Registered Successfully!");
+            form.reset();
+        }
+      </script>
 
-            <tr><td>
-              <input type="email" name="email" placeholder="Email ID *"
-                     required
-                     oninvalid="this.setCustomValidity('Please enter your email address')"
-                     oninput="this.setCustomValidity('')">
-            </td></tr>
+    </td>
+  </tr>
 
-          </table>
-        </form>
-
-        <!-- REGISTER BUTTON -->
-        <a href="#"
-           class="cta-button"
-           style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
-           onclick="validateAndSubmit(); return false;">
-           Register Now
-        </a>
-
-        <!-- JS -->
-        <script>
-          function validateAndSubmit() {
-              const form = document.getElementById("regForm");
-
-              if (!form.checkValidity()) {
-                  form.reportValidity();
-                  return;
-              }
-
-              const formData = new FormData(form);
-
-              fetch(form.action, {
-                  method: "POST",
-                  body: formData,
-                  mode: "no-cors"
-              });
-
-              alert("✅ Registered Successfully!");
-              form.reset();
-          }
-        </script>
-
-      </td>
-    </tr>
-
-  </table>
-
+</table>
 </td></tr>
 </table>
 
