@@ -125,8 +125,7 @@
                    oninput="this.setCustomValidity('')">
           </td></tr>
 
-         
-
+        
           <tr><td>
             <input type="text" name="mobile" placeholder="Mobile Number *"
                    pattern="[0-9]{10}" required
@@ -140,13 +139,14 @@
                    oninvalid="this.setCustomValidity('Please enter your work email')"
                    oninput="this.setCustomValidity('')">
           </td></tr>
-           <tr><td>
+
+            <tr><td>
             <input type="text" name="department" placeholder="Do you require logistics assistance"
-                  
-                   oninvalid="this.setCustomValidity('Department/Group ')">
-                  
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your department')"
+                   oninput="this.setCustomValidity('')">
           </td></tr>
-         
+
 
         </table>
       </form>
