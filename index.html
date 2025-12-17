@@ -49,7 +49,7 @@
     </td>
   </tr>
 
-  <!-- BACKGROUND IMAGE SECTION -->
+  <!-- BACKGROUND -->
   <tr>
     <td style="padding:0;margin:0;">
       <table width="610" height="350" cellpadding="0" cellspacing="0" border="0"
@@ -58,8 +58,6 @@
         role="presentation">
         <tr>
           <td align="center" valign="middle" style="padding:30px; background:rgba(0,0,0,0.4);">
-            <h1 style="font-size:26px;font-weight:bold;margin:0;color:#ffffff;text-align:center;">
-            </h1>
           </td>
         </tr>
       </table>
@@ -99,13 +97,16 @@
             <input type="email" id="email" name="email" placeholder="Email ID *" required>
           </td></tr>
 
+          <!-- OPTIONAL LOGISTICS ASSISTANCE FIELD -->
           <tr><td>
-            <input type="text" name="department" placeholder="Do you require logistics assistance?" required>
+            <input type="text" name="logistics_assistance"
+                   placeholder="Do you require logistics assistance? (optional)">
           </td></tr>
 
-          <!-- NEW OPTIONAL FIELD -->
+          <!-- OPTIONAL PICKUP ADDRESS -->
           <tr><td>
-            <input type="text" name="pickup_address" placeholder="Address for pick up to reach by 6:15pm ">
+            <input type="text" name="pickup_address"
+                   placeholder="Address for pick up (optional, to reach by 6:15pm)">
           </td></tr>
 
         </table>
@@ -143,8 +144,12 @@
                 return;
             }
 
-            const formData = new FormData(form);
-            fetch(form.action, { method: "POST", body: formData, mode: "no-cors"});
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                mode: "no-cors"
+            });
+
             alert("✅ Registered Successfully!");
             form.reset();
         }
