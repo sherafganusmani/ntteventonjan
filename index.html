@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <title>Round Table Invitation</title>
@@ -10,7 +11,7 @@
   img { display:block;border:0;max-width:100% }
   a { text-decoration:none;display:inline-block }
 
-  input {
+  input, select {
       width:92%;
       padding:12px 14px;
       margin:7px 0;
@@ -29,10 +30,11 @@
 
   @media only screen and (max-width:600px) {
     .container { width:100%!important;border-radius:0!important }
-    input { width:95%!important;font-size:16px!important;padding:12px!important }
+    input, select { width:95%!important;font-size:16px!important;padding:12px!important }
     .cta-button { width:90%!important;font-size:18px!important;padding:14px 22px!important }
   }
 </style>
+
 </head>
 
 <body>
@@ -42,14 +44,8 @@
 
 <table width="610" class="container" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 20px rgba(0,0,0,0.3)" role="presentation">
 
-  <!-- LOGO  
-  <tr>
-    <td align="center" style="padding:22px 0;">
-      <img src="https://theaddressevents.com/online/Signature-Evenings-Email-Invitation_01.gif" width="200" alt="Logo">
-    </td>
-  </tr>   -->
-
   <!-- BACKGROUND -->
+
   <tr>
     <td style="padding:0;margin:0;">
       <table width="610" height="350" cellpadding="0" cellspacing="0" border="0"
@@ -65,96 +61,112 @@
   </tr>
 
   <!-- FORM -->
+
   <tr>
     <td align="center" style="padding:32px 22px;background:#ffffff;font-family:Arial, sans-serif;">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:20px;color:#000000;">
         Registration Details
       </h2>
 
-      <form method="POST"
-            action="https://script.google.com/macros/s/AKfycbw13IbA2z9y0RMaDRRstzwuBRRb70W60T43It5iB4vZ9ajVmDWvSFvv-rcZRnnaRb3Y/exec"
-            id="regForm">
+```
+  <form method="POST"
+        action="https://script.google.com/macros/s/AKfycbw13IbA2z9y0RMaDRRstzwuBRRb70W60T43It5iB4vZ9ajVmDWvSFvv-rcZRnnaRb3Y/exec"
+        id="regForm">
 
-        <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation">
+    <table width="100%" cellpadding="6" cellspacing="0" border="0" role="presentation">
 
-          <tr><td>
-            <input type="text" name="name" placeholder="Full Name *" required>
-          </td></tr>
+      <tr><td>
+        <input type="text" name="name" placeholder="Full Name *" required>
+      </td></tr>
 
-          <tr><td>
-            <input type="text" name="designation" placeholder="Designation *" required>
-          </td></tr>
+      <tr><td>
+        <input type="text" name="designation" placeholder="Designation *" required>
+      </td></tr>
 
-          <tr><td>
-            <input type="text" name="company" placeholder="Company *" required>
-          </td></tr>
+      <tr><td>
+        <input type="text" name="company" placeholder="Company *" required>
+      </td></tr>
 
-          <tr><td>
-            <input type="text" name="mobile" placeholder="Mobile Number *" pattern="[0-9]{10}" required>
-          </td></tr>
+      <tr><td>
+        <input type="text" name="mobile" placeholder="Mobile Number *" pattern="[0-9]{10}" required>
+      </td></tr>
 
-          <tr><td>
-            <input type="email" id="email" name="email" placeholder="Email ID *" required>
-          </td></tr>
+      <tr><td>
+        <input type="email" id="email" name="email" placeholder="Email ID *" required>
+      </td></tr>
 
-          <!-- OPTIONAL LOGISTICS ASSISTANCE FIELD -->
-          <tr><td>
-            <input type="text" name="logistics_assistance"
-                   placeholder="Do you require logistics assistance? (optional)">
-          </td></tr>
+      <!-- OPTIONAL LOGISTICS ASSISTANCE FIELD -->
+      <tr><td>
+        <input type="text" name="logistics_assistance"
+               placeholder="Do you require logistics assistance? (optional)">
+      </td></tr>
 
-          <!-- OPTIONAL PICKUP ADDRESS -->
-          <tr><td>
-            <input type="text" name="pickup_address"
-                   placeholder="Address for pick up to reach by 6:15pm (optional)">
-          </td></tr>
+      <!-- OPTIONAL PICKUP ADDRESS -->
+      <tr><td>
+        <input type="text" name="pickup_address"
+               placeholder="Address for pick up to reach by 6:15pm (optional)">
+      </td></tr>
 
-        </table>
-      </form>
-      <a href="#"
-         class="cta-button"
-         style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
-         onclick="validateAndSubmit(); return false;">
-         Register Now
-      </a>
+      <!-- PICKUP TIMING DROPDOWN -->
+      <tr><td>
+        <select name="pickup_timing">
+          <option value="">Preferred Pickup Time (optional)</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="4:30 PM">4:30 PM</option>
+          <option value="5:00 PM">5:00 PM</option>
+          <option value="5:30 PM">5:30 PM</option>
+        </select>
+      </td></tr>
 
-      <script>
-        function validateAndSubmit() {
-            const form = document.getElementById("regForm");
-            const emailField = document.getElementById("email");
-            const email = emailField.value.toLowerCase();
+    </table>
+  </form>
 
-            const blockedDomains = [
-                "gmail.com","yahoo.com","hotmail.com","outlook.com","live.com",
-                "rediffmail.com","icloud.com","aol.com","protonmail.com","zoho.com"
-            ];
+  <a href="#"
+     class="cta-button"
+     style="background:#004C97;color:#fff;padding:15px 40px;font-size:16px;font-weight:600;border-radius:7px;text-align:center;font-family:Arial;width:210px;margin-top:12px"
+     onclick="validateAndSubmit(); return false;">
+     Register Now
+  </a>
 
-            const domain = email.split("@")[1];
-            if (blockedDomains.includes(domain)) {
-                emailField.setCustomValidity("Please enter your official company email address");
-                form.reportValidity();
-                return;
-            } else {
-                emailField.setCustomValidity("");
-            }
+  <script>
+    function validateAndSubmit() {
+        const form = document.getElementById("regForm");
+        const emailField = document.getElementById("email");
+        const email = emailField.value.toLowerCase();
 
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
+        const blockedDomains = [
+            "gmail.com","yahoo.com","hotmail.com","outlook.com","live.com",
+            "rediffmail.com","icloud.com","aol.com","protonmail.com","zoho.com"
+        ];
 
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(form),
-                mode: "no-cors"
-            });
-
-            alert("✅ Registered Successfully!");
-            form.reset();
+        const domain = email.split("@")[1];
+        if (blockedDomains.includes(domain)) {
+            emailField.setCustomValidity("Please enter your official company email address");
+            form.reportValidity();
+            return;
+        } else {
+            emailField.setCustomValidity("");
         }
-      </script>
 
-    </td>
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            mode: "no-cors"
+        });
+
+        alert("✅ Registered Successfully!");
+        form.reset();
+    }
+  </script>
+
+</td>
+```
+
   </tr>
 
 </table>
@@ -164,3 +176,4 @@
 
 </body>
 </html>
+
